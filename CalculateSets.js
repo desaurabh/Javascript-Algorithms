@@ -1,0 +1,1 @@
+﻿var sets=function(dataLength, expectedSetSize){var set=dataLength/expectedSetSize; var rem=dataLength%expectedSetSize; var result; if(rem!=0){var setStr=set.toString(); var setNum=parseInt(setStr[0]); result=setNum+1;} return result;}
