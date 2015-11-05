@@ -11,9 +11,10 @@ function deepLearnObject(object, _delObj){
          if(object.hasOwnProperty(obj)){
              console.log("PARENT : "+obj+"==========================");
              if(typeof(object[obj])==='object'){
-                 for(var remProp in _delObj){
-                     if(object[obj]!==null && object[obj].hasOwnProperty(remProp))
-			 delete object[obj][remProp];
+                 for(var index in _delObj){
+                     if(object[obj]!==null &&
+ 			object[obj].hasOwnProperty(_delObj[index]))
+			 delete object[obj][_delObj[index]];
 		 }
 		 deepLearnObject(object[obj]);
 	     }
